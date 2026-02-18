@@ -44,11 +44,11 @@ text
    打开 `db.php` 文件，填写您的数据库连接信息：
    ```php
    $host = 'localhost';   // 数据库服务器地址
-   $user = 'root';        // 数据库用户名（请修改）
+   $user = '';        // 数据库用户名（请修改）
    $pass = '';            // 数据库密码（请修改）
-   $db   = 'geren';       // 数据库名称（可自定义）
+   $db   = '';       // 数据库名称（可自定义）
 访问安装向导
-在浏览器中访问您的项目地址（例如 http://localhost/cherrydewjournal/）。
+在浏览器中访问您的项目地址（例如 http://localhost/）。
 如果 users 表为空，系统会自动跳转到 install.php 安装页面。
 
 按照向导完成安装
@@ -62,8 +62,6 @@ text
 手动导入数据库（可选）
 如果您更习惯手动导入，可以使用 mysql/geren_latest.sql 文件：
 
-bash
-mysql -u 用户名 -p < mysql/geren_latest.sql
 然后修改 db.php 中的数据库名，并跳过安装向导。
 
 📖 使用指南
@@ -75,12 +73,7 @@ mysql -u 用户名 -p < mysql/geren_latest.sql
 
 用户注册：支持邮箱/手机验证码，可在设置中强制绑定联系方式。
 
-🤝 贡献指南
-欢迎任何形式的贡献！您可以通过以下方式参与：
-
-提交 Issue 报告 Bug 或提出新功能建议
-
-发起 Pull Request 改进代码或文档
+注意：没有测试过短信与邮箱功能，不知能否使用
 
 分享项目给更多朋友，点亮 ⭐️ 支持
 
@@ -90,5 +83,5 @@ mysql -u 用户名 -p < mysql/geren_latest.sql
 🌸 致谢
 感谢复式记账领域的先驱们
 
-
 感谢所有早期用户和贡献者
+
