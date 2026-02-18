@@ -27,29 +27,6 @@ markdown
 - ✅ 纯原生 PHP 实现，无需框架
 - ✅ PHP 8.0+ 兼容
 
-## 📁 项目结构
-cherrydewjournal/
-├── css/ # 样式文件
-├── js/ # JavaScript 文件
-├── mysql/ # 数据库 SQL 文件
-│ └── geren_latest.sql # 完整数据库结构
-├── PHPMailer/ # 邮件发送库
-├── account_manager.php # 账户管理页面
-├── admin_auth.php # 管理员验证
-├── ajax_toggle_default.php # 切换账户默认状态的 AJAX 接口
-├── db.php # 数据库连接与初始化
-├── delete.php # 删除交易
-├── delete_account.php # 删除账户
-├── edit.php # 编辑交易
-├── index.php # 首页 / 交易列表
-├── install.php # 安装向导
-├── login.php # 用户登录
-├── logout.php # 用户登出
-├── register.php # 用户注册
-├── send_verification.php # 发送验证码
-├── settings.php # 系统设置
-└── README.md # 本文件
-
 text
 
 ## 🚀 快速开始
@@ -112,5 +89,6 @@ mysql -u 用户名 -p < mysql/geren_latest.sql
 
 🌸 致谢
 感谢复式记账领域的先驱们
+
 
 感谢所有早期用户和贡献者
