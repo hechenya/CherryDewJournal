@@ -1,1 +1,116 @@
-# CherryDewJournal
+markdown
+# CherryDewJournal · 樱露双记
+
+出品：荷晨 (He Chen)
+
+![License](https://img.shields.io/github/license/赫李雅/CherryDewJournal)
+![PHP Version](https://img.shields.io/badge/PHP-8.0%2B-blue)
+
+**樱露双记 (CherryDewJournal)** 是一款个人复式记账工具，名字源于：
+- 🍒 Cherry · 樱 —— 如樱花般记录生活的美好瞬间
+- 💧 Dew · 露 —— 如晨露般保持账目的清澈透明
+- 📔 Journal · 记 —— 如日记般守护每一笔收支的平衡。
+
+秉持“有借必有贷，借贷必相等”的会计铁律，让个人财务管理变得优雅而简单。
+
+---
+
+## ✨ 特性
+
+- ✅ 完整的复式记账支持（借方/贷方）
+- ✅ 用户系统与权限管理（普通用户/管理员）
+- ✅ 账户无限级分类（支持父账户）
+- ✅ 账户默认显示与排序控制（`is_default` / `sort_order`）
+- ✅ 邮箱/短信验证码注册
+- ✅ 系统配置管理（邮件、短信、注册开关等）
+- ✅ 自动数据库安装向导（`install.php`）
+- ✅ 纯原生 PHP 实现，无需框架
+- ✅ PHP 8.0+ 兼容
+
+## 📁 项目结构
+cherrydewjournal/
+├── css/ # 样式文件
+├── js/ # JavaScript 文件
+├── mysql/ # 数据库 SQL 文件
+│ └── geren_latest.sql # 完整数据库结构
+├── PHPMailer/ # 邮件发送库
+├── account_manager.php # 账户管理页面
+├── admin_auth.php # 管理员验证
+├── ajax_toggle_default.php # 切换账户默认状态的 AJAX 接口
+├── db.php # 数据库连接与初始化
+├── delete.php # 删除交易
+├── delete_account.php # 删除账户
+├── edit.php # 编辑交易
+├── index.php # 首页 / 交易列表
+├── install.php # 安装向导
+├── login.php # 用户登录
+├── logout.php # 用户登出
+├── register.php # 用户注册
+├── send_verification.php # 发送验证码
+├── settings.php # 系统设置
+└── README.md # 本文件
+
+text
+
+## 🚀 快速开始
+
+### 环境要求
+- **PHP 8.0** 或更高版本
+- **MySQL 5.7** 或更高版本
+- Web 服务器（Apache / Nginx）
+
+### 安装步骤
+
+1. **下载源码** 到您的 Web 目录（例如 `htdocs` 或 `wwwroot`）。
+
+2. **修改数据库配置**  
+   打开 `db.php` 文件，填写您的数据库连接信息：
+   ```php
+   $host = 'localhost';   // 数据库服务器地址
+   $user = 'root';        // 数据库用户名（请修改）
+   $pass = '';            // 数据库密码（请修改）
+   $db   = 'geren';       // 数据库名称（可自定义）
+访问安装向导
+在浏览器中访问您的项目地址（例如 http://localhost/cherrydewjournal/）。
+如果 users 表为空，系统会自动跳转到 install.php 安装页面。
+
+按照向导完成安装
+
+创建管理员账号
+
+可选配置邮件/短信服务（也可之后在设置中配置）
+
+完成安装后即可登录使用。
+
+手动导入数据库（可选）
+如果您更习惯手动导入，可以使用 mysql/geren_latest.sql 文件：
+
+bash
+mysql -u 用户名 -p < mysql/geren_latest.sql
+然后修改 db.php 中的数据库名，并跳过安装向导。
+
+📖 使用指南
+记账：在首页 index.php 添加交易，选择账户和方向（借/贷），系统自动校验借贷是否平衡。
+
+账户管理：通过 account_manager.php 创建、编辑、删除账户，支持无限级分类。可以设置账户是否默认显示在首页精简列表中，并调整排序。
+
+系统设置：在 settings.php 中配置邮件服务器、短信服务商、注册选项等。
+
+用户注册：支持邮箱/手机验证码，可在设置中强制绑定联系方式。
+
+🤝 贡献指南
+欢迎任何形式的贡献！您可以通过以下方式参与：
+
+提交 Issue 报告 Bug 或提出新功能建议
+
+发起 Pull Request 改进代码或文档
+
+分享项目给更多朋友，点亮 ⭐️ 支持
+
+📄 许可证
+本项目采用 MIT 许可证。详情请见 LICENSE 文件。
+
+🌸 致谢
+感谢复式记账领域的先驱们
+
+感谢所有早期用户和贡献者
